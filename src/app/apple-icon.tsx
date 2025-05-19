@@ -7,40 +7,28 @@ export const size = {
 export const contentType = 'image/png';
 
 export default function Icon() {
+  const halfSize = size.width / 2;
   const padding = size.width / 8;
-  const sizeWithoutPadding = size.width - 2 * padding;
-
-  const strokeWidth = sizeWithoutPadding / 8;
-  const halfStrokeWidth = strokeWidth / 2;
-  const halfSize = sizeWithoutPadding / 2;
-  const middle = (halfSize - halfStrokeWidth) / 2;
+  const strokeWidth = (size.width - 2 * padding) / 8;
+  const start = strokeWidth / 2 + padding;
+  const middle = (halfSize - start) / 2;
   return new ImageResponse(
     (
-      <div
-        style={{
-          height: '100%',
-          width: '100%',
-          display: 'flex',
-          padding,
-        }}
-      >
-        <svg width={size.width} height={size.width} viewBox={`0 0 ${size.width} ${size.width}`}>
-          <path
-            fill={'none'}
-            stroke={'#aa1414'}
-            stroke-width={strokeWidth}
-            stroke-linecap={'round'}
-            stroke-linejoin={'round'}
-            d={`
-            m ${halfStrokeWidth},${halfStrokeWidth}
+      <svg width={size.width} height={size.height} viewBox={`0 0 ${size.width} ${size.height}`}>
+        <path
+          fill={'none'}
+          stroke={'#aa1414'}
+          stroke-width={strokeWidth}
+          stroke-linecap={'round'}
+          stroke-linejoin={'round'}
+          d={`
+            m ${start},${start}
             h ${middle}
             c 0,0 ${middle},0 ${middle},${middle} 0,${middle} -${middle},${middle} -${middle},${middle}
-            L ${halfSize},${sizeWithoutPadding - halfStrokeWidth} ${
-              sizeWithoutPadding - halfStrokeWidth
-            },${halfStrokeWidth}`}
-          />
-        </svg>
-      </div>
+            L ${halfSize},${size.width - start} ${size.width - start},${start}
+          `}
+        />
+      </svg>
     ),
     { ...size }
   );
