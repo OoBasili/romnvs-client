@@ -1,0 +1,16 @@
+<svg width="128" height="128" xmlns="http://www.w3.org/2000/svg">
+  <path
+    fill="none"
+    fill-opacity="1"
+    stroke="#aa1414"
+    stroke-width="20"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-opacity="1"
+    paint-order="normal"
+    d="m 10,10
+      h 27
+      c 0,0 27,0 27,27 0,27 -27,27 -27,27
+      L 64,118 118,10"
+  />
+</svg>

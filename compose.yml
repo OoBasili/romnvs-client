@@ -1,0 +1,26 @@
+services:
+  nextjs:
+    build:
+      context: .
+      target: runner
+    environment:
+      - NODE_ENV=production
+    restart: unless-stopped
+    networks:
+      - next-network
+
+  nginx:
+    build:
+      context: .
+      target: nginx
+    ports:
+      - '80:80'
+    depends_on:
+      - nextjs
+    restart: unless-stopped
+    networks:
+      - next-network
+
+networks:
+  next-network:
+    driver: bridge
