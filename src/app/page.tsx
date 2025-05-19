@@ -7,7 +7,7 @@ export default function Home() {
         <h3>Contact</h3>
         <p>Author: Romanov Vasiliy</p>
         <p>
-          <a href="mailto:vasilok11@gmail.com">vasilok11@gmail.com</a>
+          <a href='mailto:vasilok11@gmail.com'>vasilok11@gmail.com</a>
         </p>
       </footer>
     </div>
