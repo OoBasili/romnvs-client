@@ -14,10 +14,14 @@ export default function Icon() {
   const middle = (halfSize - start) / 2;
   return new ImageResponse(
     (
-      <svg width={size.width} height={size.height} viewBox={`0 0 ${size.width} ${size.height}`}>
+      <svg
+        xmlns='http://www.w3.org/2000/svg'
+        viewBox={`0 0 ${size.width} ${size.height}`}
+        style={{ backgroundColor: '#ffd43b' }}
+      >
         <path
           fill={'none'}
-          stroke={'#aa1414'}
+          stroke={'#0f0f0f'}
           stroke-width={strokeWidth}
           stroke-linecap={'round'}
           stroke-linejoin={'round'}
@@ -30,6 +34,6 @@ export default function Icon() {
         />
       </svg>
     ),
-    { ...size }
+    size
   );
 }

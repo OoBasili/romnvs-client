@@ -6,16 +6,14 @@ export default function manifest(): MetadataRoute.Manifest {
     short_name: 'Romnvs',
     icons: [
       {
-        src: '/public/favicon/favicon.ico/web-app-manifest-192x192.png',
+        src: '/public/favicon/icon-192.png',
         sizes: '192x192',
         type: 'image/png',
-        purpose: 'maskable',
       },
       {
-        src: '/public/favicon/favicon.ico/web-app-manifest-512x512.png',
+        src: '/public/favicon/icon-512.png',
         sizes: '512x512',
         type: 'image/png',
-        purpose: 'maskable',
       },
     ],
     theme_color: '#ffffff',

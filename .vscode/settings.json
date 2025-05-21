@@ -9,16 +9,7 @@
   "editor.codeActionsOnSave": {
     "source.removeUnusedImports": "always"
   },
-  "[typescriptreact]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
-  },
-  "[typescript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
-  },
-  "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
-  },
-  "[javascriptreact]": {
+  "[typescriptreact][typescript][javascript][javascriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
   "files.encoding": "utf8",

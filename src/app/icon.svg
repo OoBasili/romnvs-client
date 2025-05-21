@@ -1,10 +1,11 @@
-<svg width="128" height="128" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <rect fill="#ffd43b" width="128" height="128" rx="22" />
   <path
     fill="none"
-    stroke="#aa1414"
-    stroke-width="16"
+    stroke="#0f0f0f"
+    stroke-width="12"
     stroke-linecap="round"
     stroke-linejoin="round"
-    d="m 10,10 h 27 c 0,0 27,0 27,27 0,27 -27,27 -27,27 L 64,118 118,10"
+    d="m 22,22 h 21 c 0,0 21,0 21,21 0,21 -21,21 -21,21 L 64,106 106,22"
   />
 </svg>
