@@ -1,6 +1,5 @@
 FROM node:18-alpine AS base
 
-# Stage 1: Install dependencies
 FROM base AS deps
 RUN apk add --no-cache libc6-compat
 WORKDIR /app
@@ -17,7 +16,6 @@ COPY package.json yarn.lock* ./
 #  fi
 RUN yarn --frozen-lockfile;
 
-# Stage 2: Build application
 FROM base AS builder
 WORKDIR /app
 COPY --from=deps /app/node_modules ./node_modules
@@ -31,7 +29,6 @@ COPY . .
 #  fi
 RUN yarn run build;
 
-# Stage 3: Create runner for Next.js
 FROM base AS runner
 WORKDIR /app
 
@@ -50,13 +47,3 @@ EXPOSE 3000
 ENV PORT=3000
 ENV HOSTNAME="0.0.0.0"
 CMD ["node", "server.js"]
-
-# Stage 4: Nginx reverse proxy
-FROM nginx:alpine AS nginx
-WORKDIR /etc/nginx
-
-RUN rm -rf /etc/nginx/conf.d/default.conf
-COPY nginx.conf /etc/nginx/conf.d/default.conf
-
-EXPOSE 80
-CMD ["nginx", "-g", "daemon off;"]

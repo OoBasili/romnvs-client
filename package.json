@@ -9,8 +9,11 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@tanstack/react-query": "^5.76.1",
+    "@tanstack/react-query": "^5.79.0",
     "client-only": "^0.0.1",
+    "graphql": "^16.11.0",
+    "graphql-request": "^7.2.0",
+    "mobx": "^6.13.7",
     "next": "15.3.2",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
@@ -18,6 +21,8 @@
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
+    "@graphql-codegen/cli": "^5.0.6",
+    "@parcel/watcher": "^2.5.1",
     "@tanstack/eslint-plugin-query": "^5.74.7",
     "@types/node": "^20",
     "@types/react": "^19",
@@ -26,6 +31,6 @@
     "eslint-config-next": "15.3.2",
     "eslint-config-prettier": "^10.1.5",
     "sass": "^1.89.0",
-    "typescript": "^5"
+    "typescript": "^5.8.3"
   }
 }
