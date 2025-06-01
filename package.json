@@ -2,6 +2,8 @@
   "name": "romnvs",
   "version": "0.1.0",
   "private": true,
+  "author": "Romanov Vasiliy",
+  "license": "MIT",
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
